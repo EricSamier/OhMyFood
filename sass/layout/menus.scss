@@ -1,5 +1,7 @@
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
+@use "../utils/linear-gradient.scss";
+
 #home-page{
 
     .menus{
@@ -35,6 +37,18 @@
             top:50%;
             transform:translateY(-50%);
            } 
+           .fa-solid{
+            color: transparent;
+            background-clip:text ;
+            -webkit-background-clip:text;
+            opacity: 0;
+            transition: all 200ms ease-in-out;
+            transform: translateY(-50%) scale(1.2);
+            @include linear-gradient.gradient(1);
+           }
+           &:hover .fa-solid{
+            opacity: 1;
+           }
         }                      
     }
     &__container{

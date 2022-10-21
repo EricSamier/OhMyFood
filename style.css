@@ -98,6 +98,7 @@ h1, h2, h3, h4, h5, h6, p {
   cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 0.25rem 0.25rem 5px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 .explorer__btn:hover {
   transform: scale(1.02);
@@ -223,6 +224,18 @@ h1, h2, h3, h4, h5, h6, p {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
+}
+#home-page .menus .card__description .fa-solid {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  transform: translateY(-50%) scale(1.2);
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+#home-page .menus .card__description:hover .fa-solid {
+  opacity: 1;
 }
 #home-page .menus__container {
   display: grid;
