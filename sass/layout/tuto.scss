@@ -1,0 +1,52 @@
+
+@use "../utils/box-shadows.scss";
+
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
+
+.container{
+    margin: 1rem;
+}
+.tuto{
+    margin-bottom: 2rem;
+    counter-reset:steps;
+    & ol{
+        display: flex;
+        gap: 2rem;
+        @media(max-width:1000px) {
+            flex-direction: column;
+        }
+    }
+    & li{
+        &::before{
+            content:counter(steps);
+            counter-increment:steps;
+            color: white;
+            background:colors.$purple;
+            width: 2 * variables.$tuto-bubble-space;
+            height: 2* variables.$tuto-bubble-space;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            position: absolute;
+           /*  bottom: variables.$tuto-bubble-space; */
+            top:50%;
+            transform: translateY(-50%);
+            left: -1* variables.$tuto-bubble-space;
+        }
+        position: relative;
+        list-style-type: none;
+        background-color: #f6f6f6;
+        padding: 1.5rem;
+        flex-grow: 1;
+        border-radius: 1rem;
+        border: solid 1px red($color: #000000);
+        @include box-shadows.design-shadow;
+        
+    }
+    
+    & i.fas{
+        margin-right: 1rem;
+        color:colors.$light-grey;
+    }
+}

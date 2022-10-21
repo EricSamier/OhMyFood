@@ -1,0 +1,67 @@
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
+#home-page{
+
+    .menus{
+        background-color: #f6f6f6;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        
+    h2{
+        margin-left: 1rem;
+    }
+    .card{
+        &__image{
+            border-radius: 1rem 1rem 0 0;
+            height: 15rem;
+            background-size: cover;
+            
+        }
+        @for $i from 1 through 4{
+            &__image-#{$i}{
+                background-image: url(../../images/menu-#{$i}.jpg);
+            }
+        } 
+        &__description{
+            position: relative;
+            background-color: white;
+            border-radius: 0 0 1rem 1rem;
+            padding: 1rem;
+
+           i{
+            font-size: 2rem;
+            position: absolute;
+            right:1rem;
+            top:50%;
+            transform:translateY(-50%);
+           } 
+        }                      
+    }
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:2rem;
+        margin:0 1rem; 
+        @media (max-width:variables.$breakpoint) {
+            grid-template-columns: repeat(1,1fr);
+                         
+        }
+        .new{
+         position: relative;  
+        }
+        .new::before{
+            content: "Nouveau";
+            position: absolute;
+            width: 5rem;
+            height: 2rem;
+            background-color:colors.$tertiary-color;
+            color: darken(colors.$tertiary-color, $amount: 50%);
+            display: grid;
+            place-items: center;
+            right: 1rem;
+            top: 1rem;
+        }
+    }
+
+}
+    }

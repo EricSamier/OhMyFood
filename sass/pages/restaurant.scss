@@ -1,0 +1,140 @@
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
+@use "../utils/box-shadows.scss";
+@use "../utils/animations.scss";
+@use "../utils/mixins.scss";
+
+
+
+body{
+    background-color: colors.$lighter-grey;
+}
+#resto-page{
+
+    .preview img{
+       max-height: 32rem;
+        width: 100%;
+        object-fit: cover;
+    }
+.resto-main{
+    padding: 1rem;
+    background-color:colors.$lighter-grey;
+}
+.resto__title{
+    padding: 0 1rem;
+    background-color:colors.$lighter-grey;
+    margin-top: -2rem;
+    position: relative;
+    border-radius: 2rem 2rem 0 0 ;
+    
+    h2{
+        font-family: "Shrikhand", "sans-serif";
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 1rem;
+        
+    }
+}
+
+.menus{
+    background-color:colors.$lighter-grey;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    @media (max-width:variables.$breakpoint) {
+        grid-template-columns:1fr;
+    }
+    h3{
+        text-transform: uppercase;
+
+        font-weight: 400;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            top:1.5rem;
+            left: 0;
+
+            height: 0.25rem;
+            width: 3rem;
+            background-color:colors.$tertiary-color;
+        }
+    }
+    &__category {
+        overflow: hidden;
+
+        .menu-item{
+            $item-number:3;
+            @for $i from 1 through $item-number {
+                &:nth-child(#{$i}){
+                    animation-delay: 100ms*$i;
+                }
+            }
+            background-color: white;
+            display: flex;
+            border-radius: 1rem;
+            overflow: hidden;
+            margin: 1.5rem 0.5rem;
+            animation: appear 3s;
+            animation-fill-mode: both;
+            &:hover{
+                cursor: pointer;
+            }
+            @include box-shadows.design-shadow;
+            .menu-item__price{
+                display: flex;
+                align-items: flex-end;
+                margin-left:auto;
+                font-weight: 900;
+            padding: 1rem;
+        }
+        .menu-item__description{
+            padding: 1rem;
+            overflow: hidden;
+            h4,p{
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+        .menu-item__checked{
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            $button-width:4rem;
+            background-color: colors.$tertiary-color;
+            margin-right:-$button-width;
+            width: $button-width;
+            transition: margin-right 0.5s;
+            i {
+                display: grid;
+                place-items: center;
+                background: white;
+                height: 2rem;
+                width: 2rem;
+                border-radius: 1rem;
+                color: colors.$tertiary-color;
+
+            }
+        }
+        &:hover {
+            .menu-item__checked{
+            margin-right:0 ;
+        }
+        i{
+            @include animations.check-spin;
+           animation: check-spin 0.5s ease-in-out; 
+        }
+        }
+        }
+    }
+}
+section.order{
+    height: 20vh;
+    display: grid;
+    place-items: center;
+    button{
+         @include mixins.base-button;
+    }
+}
+}

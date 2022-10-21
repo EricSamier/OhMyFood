@@ -1,0 +1,61 @@
+@use "../utils/box-shadows.scss";
+@use "../utils/mixins.scss";
+@use "../utils/colors.scss";
+
+.explorer{
+    padding: 2rem;
+    text-align: center;
+    background-color:white;
+  &__title{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+  &__subtitle{
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+  &__btn{
+    @include mixins.base-button;
+  }
+
+  }
+  .loader{
+    $animation-duration:1s;
+    $animation-count:3;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    background-color:#ffff;
+    inset:0;
+    height: 100vh;
+    z-index: 1000;
+    opacity: 0.97;
+    transform-origin: top;
+    animation: disappear 200ms $animation-duration * $animation-count forwards;
+    &::after{
+      content: "";
+      height:200px;
+      width: 200px;
+      border: 5px transparent solid;
+      border-top:colors.$purple solid 5px;
+      border-bottom:colors.$tertiary-color solid 5px;
+      border-radius: 50%;
+      animation: spin $animation-duration infinite ease-in-out;
+      animation-iteration-count: $animation-count;
+    }
+  }
+
+  @keyframes disappear {
+
+    to{
+      transform: scale(0);
+    }
+    
+  }
+  @keyframes spin{
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

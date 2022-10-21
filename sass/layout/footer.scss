@@ -1,0 +1,22 @@
+@use "../../sass/utils/colors.scss";
+@use "../../sass/utils/variables.scss";
+footer{
+    background-color:colors.$dark-grey;
+    padding: 1rem 7rem;
+    @media(max-width:variables.$breakpoint){
+        padding: 1rem ;  
+    }
+    color: white;
+    h2{
+        font-family: "Shrikhand", "sans-serif";
+        font-weight: 500;
+        padding: 1rem 0;
+        
+    }
+    p{
+        padding: 0.2rem;
+    }
+    i {
+        margin-right: 0.5rem;
+    }
+}

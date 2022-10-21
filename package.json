@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet OpenClassroom P3 OhMyFood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricSamier/ohmyfood.git"
+  },
+  "author": "Eric Samier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricSamier/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/EricSamier/ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
