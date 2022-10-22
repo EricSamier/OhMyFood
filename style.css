@@ -217,9 +217,6 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: white;
   border-radius: 0 0 1rem 1rem;
   padding: 1rem;
-  /*            &:hover .fa-solid{
-              opacity: 1;
-             } */
 }
 #home-page .menus .card__description::before {
   display: inline-block;
