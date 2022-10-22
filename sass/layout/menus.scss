@@ -1,6 +1,6 @@
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
-@use "../utils/linear-gradient.scss";
+@use "../utils/mixins.scss";
 
 #home-page{
 
@@ -29,26 +29,23 @@
             background-color: white;
             border-radius: 0 0 1rem 1rem;
             padding: 1rem;
-
-           i{
-            font-size: 2rem;
-            position: absolute;
-            right:1rem;
-            top:50%;
-            transform:translateY(-50%);
-           } 
-           .fa-solid{
-            color: transparent;
-            background-clip:text ;
-            -webkit-background-clip:text;
-            opacity: 0;
-            transition: all 200ms ease-in-out;
-            transform: translateY(-50%) scale(1.2);
-            @include linear-gradient.gradient(1);
-           }
-           &:hover .fa-solid{
+            &::before{
+                @include mixins.heart;
+             }
+             &::after{
+                @include mixins.heart;
+                @include mixins.gradient(1);
+                opacity: 0;
+                font-weight: 900;
+                color: transparent;
+                }
+            &:hover::after{
+               opacity: 1; 
+               transform: translateY(-50%) scale(1.3);
+            }
+/*            &:hover .fa-solid{
             opacity: 1;
-           }
+           } */
         }                      
     }
     &__container{

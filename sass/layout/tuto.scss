@@ -1,6 +1,5 @@
 
-@use "../utils/box-shadows.scss";
-
+@use "../utils/mixins.scss";
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
 
@@ -41,7 +40,7 @@
         flex-grow: 1;
         border-radius: 1rem;
         border: solid 1px red($color: #000000);
-        @include box-shadows.design-shadow;
+        @include mixins.design-shadow;
         
     }
     

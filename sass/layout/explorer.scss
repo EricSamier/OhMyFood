@@ -1,7 +1,5 @@
-@use "../utils/box-shadows.scss";
 @use "../utils/mixins.scss";
 @use "../utils/colors.scss";
-@use "../utils/linear-gradient.scss";
 
 .explorer{
     padding: 2rem;
@@ -18,7 +16,7 @@
   }
   &__btn{
     @include mixins.base-button;
-    @include linear-gradient.gradient(0.9);
+    @include mixins.gradient(0.9);
   }
 
   }

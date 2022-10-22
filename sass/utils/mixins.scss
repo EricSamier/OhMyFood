@@ -1,4 +1,7 @@
-@use "./box-shadows.scss";
+@mixin design-shadow {
+  box-shadow: 0.25rem 0.25rem 5px rgb(0 0 0 / 25%);
+
+}
 
 @mixin base-button {
     border: 0;
@@ -11,10 +14,37 @@
     background-image: linear-gradient(to top ,rgba(147,86,220,.9),rgba(255,121,218,.9));
     cursor: pointer;
     transition-duration: .25s;
-    @include box-shadows.design-shadow;
+    @include design-shadow;
     &:hover{
         transform: scale(1.02);
         opacity: 0.9;;
       }
 
+}
+
+@mixin gradient ($opacity:0.9) {
+  background-image: linear-gradient(to top ,rgba(147,86,220,$opacity),rgba(255,121,218,$opacity));
+
+}
+
+@mixin heart {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 400; 
+  content: "\f004";
+  font-size: 2rem;
+position: absolute;
+right:1rem;
+top:50%;
+transform:translateY(-50%);
+color: black;
+background-clip:text ;
+-webkit-background-clip:text;
+opacity: 1;
+transition: all 200ms ease-in-out;
+transform: translateY(-50%) scale(1.2);
 }
