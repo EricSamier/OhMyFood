@@ -213,10 +213,9 @@ h1, h2, h3, h4, h5, h6, p {
   background-image: url(../../images/menu-4.jpg);
 }
 #home-page .menus .card__description {
-  position: relative;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
-  padding: 1rem;
+  position: relative;
 }
 #home-page .menus .card__description::before {
   display: inline-block;
@@ -232,7 +231,7 @@ h1, h2, h3, h4, h5, h6, p {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: black;
+  color: inherit;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
@@ -253,7 +252,7 @@ h1, h2, h3, h4, h5, h6, p {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: black;
+  color: inherit;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
@@ -352,6 +351,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 2rem 1rem;
+  position: relative;
 }
 #resto-page .resto__title h2::before {
   display: inline-block;
@@ -367,7 +367,7 @@ body {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: black;
+  color: inherit;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
@@ -388,7 +388,7 @@ body {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: black;
+  color: inherit;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
