@@ -4,7 +4,8 @@
   "description": "projet OpenClassroom P3 OhMyFood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch style.scss style.css"
+    "sass": "sass --watch style.scss style.css",
+    "build": "postcss style.css -use autoprefixer -o ./build/style.css"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/EricSamier/ohmyfood#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0",
     "sass": "^1.55.0"
   }
 }
