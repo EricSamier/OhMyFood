@@ -102,7 +102,7 @@ body{
             flex-shrink: 0;
             background-color: colors.$tertiary-color;
             margin-right:- (variables.$button-width);
-            width: variables.$button-width;
+            width: npnvariables.$button-width;
             transition: margin-right 0.5s;
             i {
                 display: grid;
