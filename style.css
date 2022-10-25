@@ -170,6 +170,8 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 .tuto li {
+  display: flex;
+  align-items: center;
   position: relative;
   list-style-type: none;
   background-color: #f6f6f6;
@@ -190,10 +192,15 @@ h1, h2, h3, h4, h5, h6, p {
   display: grid;
   place-items: center;
   position: absolute;
-  /*  bottom: variables.$tuto-bubble-space; */
   top: 50%;
   transform: translateY(-50%);
   left: -1rem;
+}
+.tuto li:hover {
+  background-color: #e4d5f6;
+}
+.tuto li:hover i::before {
+  color: #9356dc;
 }
 .tuto i.fas {
   margin-right: 1rem;
@@ -212,6 +219,7 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 1rem 1rem 0 0;
   height: 15rem;
   background-size: cover;
+  background-position: center;
 }
 #home-page .menus .card__image-1 {
   background-image: url(../../images/menu-1.jpg);
@@ -353,6 +361,7 @@ body {
   max-height: 32rem;
   width: 100%;
   object-fit: cover;
+  object-position: center;
 }
 #resto-page .resto-main {
   padding: 1rem;

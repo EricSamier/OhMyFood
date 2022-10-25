@@ -5,7 +5,6 @@
 
 .container{
     margin: 1rem;
- 
 }
 .tuto{
     padding:1rem;
@@ -34,11 +33,12 @@
             display: grid;
             place-items: center;
             position: absolute;
-           /*  bottom: variables.$tuto-bubble-space; */
             top:50%;
             transform: translateY(-50%);
             left: -1* variables.$tuto-bubble-space;
         }
+        display: flex;
+        align-items: center;
         position: relative;
         list-style-type: none;
         background-color: #f6f6f6;
@@ -47,6 +47,12 @@
         border-radius: 1rem;
         border: solid 1px red($color: #000000);
         @include mixins.design-shadow;
+        &:hover{
+            background-color: lighten(colors.$purple,30%);
+            i::before{
+                color:colors.$purple;
+            }
+        }
         
     }
     
