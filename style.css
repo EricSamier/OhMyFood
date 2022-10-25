@@ -230,16 +230,16 @@ h1, h2, h3, h4, h5, h6, p {
   background-position: center;
 }
 #home-page .menus .card__image-1 {
-  background-image: url(../../images/menu-1.jpg);
+  background-image: url(./images/menu-1.jpg);
 }
 #home-page .menus .card__image-2 {
-  background-image: url(../../images/menu-2.jpg);
+  background-image: url(./images/menu-2.jpg);
 }
 #home-page .menus .card__image-3 {
-  background-image: url(../../images/menu-3.jpg);
+  background-image: url(./images/menu-3.jpg);
 }
 #home-page .menus .card__image-4 {
-  background-image: url(../../images/menu-4.jpg);
+  background-image: url(./images/menu-4.jpg);
 }
 #home-page .menus .card__description {
   background-color: white;
