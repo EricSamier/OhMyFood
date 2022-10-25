@@ -128,12 +128,16 @@ body{
         }
     }
 }
-section.order{
+.order{
     height: 20vh;
     display: grid;
     place-items: center;
     button{
          @include mixins.base-button;
     }
+}
+.large{
+    @include mixins.big-scree-padding;
+    background-color: white;
 }
 }

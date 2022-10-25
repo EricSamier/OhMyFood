@@ -1,3 +1,5 @@
+@use "./utils/variables.scss";
+@use "./utils/mixins.scss";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap');
 
@@ -16,8 +18,8 @@ main{
   padding: 0 7rem;
   @media (max-width:1000px) {
     padding: 0 ;
-
   }
+  @include mixins.big-scree-padding;
 }
 
 a{

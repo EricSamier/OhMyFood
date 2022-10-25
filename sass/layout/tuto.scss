@@ -5,12 +5,18 @@
 
 .container{
     margin: 1rem;
+ 
 }
 .tuto{
-    margin-bottom: 2rem;
+    padding:1rem;
+    background-color: white;
     counter-reset:steps;
+    @media (min-width: variables.$large-screen) {
+        padding: 1rem 40rem;
+    }
     & ol{
         display: flex;
+        padding-left:1rem;
         gap: 2rem;
         @media(max-width:1000px) {
             flex-direction: column;

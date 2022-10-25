@@ -19,6 +19,11 @@ main {
     padding: 0;
   }
 }
+@media (min-width: 2500px) {
+  main {
+    padding: 1rem 40rem;
+  }
+}
 
 a {
   text-decoration: none;
@@ -37,6 +42,7 @@ h1, h2, h3, h4, h5, h6, p {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   margin: 0px;
   position: relative;
+  z-index: 1;
 }
 .header__arrow {
   position: absolute;
@@ -60,7 +66,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   justify-content: center;
   font-size: 1.2rem;
-  padding: 2rem;
+  padding: 1.25rem 1rem;
   background-color: #f3f3f3;
   position: relative;
   gap: 1rem;
@@ -68,23 +74,23 @@ h1, h2, h3, h4, h5, h6, p {
 .city fa-location {
   font-weight: 900;
 }
-.city text {
+.city h2 {
   font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .explorer {
   padding: 2rem;
   text-align: center;
-  background-color: white;
+  background-color: #fafafa;
 }
 .explorer__title {
-  margin-top: 1.5rem;
   font-size: 1.5rem;
 }
 .explorer__subtitle {
   font-size: 1rem;
   font-weight: 300;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem;
 }
 .explorer__btn {
   border: 0;
@@ -144,11 +150,18 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .tuto {
-  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: white;
   counter-reset: steps;
+}
+@media (min-width: 2500px) {
+  .tuto {
+    padding: 1rem 40rem;
+  }
 }
 .tuto ol {
   display: flex;
+  padding-left: 1rem;
   gap: 2rem;
 }
 @media (max-width: 1000px) {
@@ -193,7 +206,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding-bottom: 2rem;
 }
 #home-page .menus h2 {
-  margin-left: 1rem;
+  margin: 1rem;
 }
 #home-page .menus .card__image {
   border-radius: 1rem 1rem 0 0;
@@ -214,6 +227,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 #home-page .menus .card__description {
   background-color: white;
+  padding: 0.75rem 1.5rem;
   border-radius: 0 0 1rem 1rem;
   position: relative;
 }
@@ -226,7 +240,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\f004";
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: absolute;
   right: 1rem;
   top: 50%;
@@ -247,7 +261,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\f004";
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: absolute;
   right: 1rem;
   top: 50%;
@@ -302,6 +316,11 @@ footer {
 @media (max-width: 1000px) {
   footer {
     padding: 1rem;
+  }
+}
+@media (min-width: 2500px) {
+  footer {
+    padding: 1rem 40rem;
   }
 }
 footer h2 {
@@ -362,7 +381,7 @@ body {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\f004";
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: absolute;
   right: 1rem;
   top: 50%;
@@ -383,7 +402,7 @@ body {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\f004";
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: absolute;
   right: 1rem;
   top: 50%;
@@ -501,12 +520,12 @@ body {
     transform: rotate(0);
   }
 }
-#resto-page section.order {
+#resto-page .order {
   height: 20vh;
   display: grid;
   place-items: center;
 }
-#resto-page section.order button {
+#resto-page .order button {
   border: 0;
   padding: 0.75rem 1.5rem;
   font-weight: 500;
@@ -519,9 +538,17 @@ body {
   transition-duration: 0.25s;
   box-shadow: 0.25rem 0.25rem 5px rgba(0, 0, 0, 0.25);
 }
-#resto-page section.order button:hover {
+#resto-page .order button:hover {
   transform: scale(1.02);
   opacity: 0.9;
+}
+#resto-page .large {
+  background-color: white;
+}
+@media (min-width: 2500px) {
+  #resto-page .large {
+    padding: 1rem 40rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
