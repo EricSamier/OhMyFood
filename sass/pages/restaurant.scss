@@ -64,8 +64,7 @@ body{
         overflow: hidden;
 
         .menu-item{
-            $item-number:3;
-            @for $i from 1 through $item-number {
+            @for $i from 1 through variables.$item-number {
                 &:nth-child(#{$i}){
                     animation-delay: 100ms*$i;
                 }
@@ -101,10 +100,9 @@ body{
             display: grid;
             place-items: center;
             flex-shrink: 0;
-            $button-width:4rem;
             background-color: colors.$tertiary-color;
-            margin-right:-$button-width;
-            width: $button-width;
+            margin-right:- (variables.$button-width);
+            width: variables.$button-width;
             transition: margin-right 0.5s;
             i {
                 display: grid;

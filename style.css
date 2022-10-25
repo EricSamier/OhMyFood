@@ -1,5 +1,13 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
+/* grosseur des bulles d'étape du tuto tuto.scss */
+/* breakpoint pour passer de deux colonnes à une sur les petits écrans - footer/menu/restaurant.scss */
+/* breakpoint pour centrage du design sur les plus grands écrans - tuto .scss */
+/* durée de l'animation du loader - explorer.scss */
+/* nombre de spin du loader - explorer.scss */
+/* nombre d'items du menu- restaurant.scss */
+/* largeur du bouton checked- restaurant.scss */
 *,
 ::before,
 ::after {
@@ -19,7 +27,7 @@ main {
     padding: 0;
   }
 }
-@media (min-width: 2500px) {
+@media (min-width: 2560px) {
   main {
     padding: 1rem 40rem;
   }
@@ -154,7 +162,7 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: white;
   counter-reset: steps;
 }
-@media (min-width: 2500px) {
+@media (min-width: 2560px) {
   .tuto {
     padding: 1rem 40rem;
   }
@@ -326,7 +334,7 @@ footer {
     padding: 1rem;
   }
 }
-@media (min-width: 2500px) {
+@media (min-width: 2560px) {
   footer {
     padding: 1rem 40rem;
   }
@@ -554,7 +562,7 @@ body {
 #resto-page .large {
   background-color: white;
 }
-@media (min-width: 2500px) {
+@media (min-width: 2560px) {
   #resto-page .large {
     padding: 1rem 40rem;
   }

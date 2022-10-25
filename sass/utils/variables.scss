@@ -1,3 +1,15 @@
+
+/* grosseur des bulles d'étape du tuto tuto.scss */
 $tuto-bubble-space:1rem;
+/* breakpoint pour passer de deux colonnes à une sur les petits écrans - footer/menu/restaurant.scss */
 $breakpoint:1000px;
-$large-screen:2500px;
+/* breakpoint pour centrage du design sur les plus grands écrans - tuto .scss */
+$large-screen:2560px;
+/* durée de l'animation du loader - explorer.scss */
+$animation-duration:1s;
+/* nombre de spin du loader - explorer.scss */
+$animation-count:3;
+/* nombre d'items du menu- restaurant.scss */
+$item-number:3;
+/* largeur du bouton checked- restaurant.scss */
+$button-width:4rem;

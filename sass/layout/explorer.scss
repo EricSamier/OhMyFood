@@ -1,5 +1,6 @@
 @use "../utils/mixins.scss";
 @use "../utils/colors.scss";
+@use "../utils/variables.scss";
 
 .explorer{
     padding: 2rem;
@@ -20,8 +21,6 @@
 
   }
   .loader{
-    $animation-duration:1s;
-    $animation-count:3;
     display: grid;
     place-items: center;
     position: fixed;
@@ -31,7 +30,7 @@
     z-index: 1000;
     opacity: 0.97;
     transform-origin: top;
-    animation: disappear 200ms $animation-duration * $animation-count forwards;
+    animation: disappear 200ms variables.$animation-duration * variables.$animation-count forwards;
     &::after{
       content: "";
       height:200px;
@@ -40,8 +39,8 @@
       border-top:colors.$purple solid 5px;
       border-bottom:colors.$tertiary-color solid 5px;
       border-radius: 50%;
-      animation: spin $animation-duration infinite ease-in-out;
-      animation-iteration-count: $animation-count;
+      animation: spin variables.$animation-duration infinite ease-in-out;
+      animation-iteration-count: variables.$animation-count;
     }
   }
 
