@@ -16,8 +16,7 @@
   }
   &__btn{
     @include mixins.base-button;
-    @include mixins.gradient(0.9);
-  }
+ }
 
   }
   .loader{
